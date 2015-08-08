@@ -1,0 +1,165 @@
+" Sync nerdtree with current opened tab
+autocmd BufEnter * lcd %:p:h
+
+"set tab to 2 spaces
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set directory=~/.vim/tmp//,/tmp
+"set backupdir=./.backup,.,/tmp
+"set directory=.,./.backup,/tmp
+set encoding=utf-8
+set termencoding=utf-8
+set autoread
+"set autowrite                       " Automatically write a file when leaving a modified buffer
+set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
+set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
+set virtualedit=onemore             " Allow for cursor beyond last character
+set history=1000                    " Store a ton of history (default is 20)
+set hidden
+
+if has('persistent_undo')
+    set undofile                " So is persistent undo ...
+    set undolevels=1000         " Maximum number of changes that can be undone
+    set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+endif
+
+set clipboard=unnamed
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" NerdTree
+let NERDTreeShowHidden=1
+
+"enables powerline/airline symbols
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+if has('statusline')
+    set laststatus=2
+
+    " Broken down into easily includeable segments
+    set statusline=%<%f\                     " Filename
+    set statusline+=%w%h%m%r                 " Options
+    set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " Filetype
+    set statusline+=\ [%{getcwd()}]          " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
+
+"set colorscheme
+let g:hybrid_use_Xresources=1
+set background=dark
+colorscheme tomorrow-night
+
+"vim rubocop keymap
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+
+"let g:syntastic_jshint_exec = '/usr/local/bin/jshint'
+"let g:syntastic_javascript_checkers = ['jslint']
+
+
+" Tagbar
+nmap <C-]> :TagbarToggle<CR>
+
+" Fugitive {
+if isdirectory(expand("~/.vim/plugged/vim-fugitive/"))
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gl :Glog<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
+    nnoremap <silent> <leader>gr :Gread<CR>
+    nnoremap <silent> <leader>gw :Gwrite<CR>
+    nnoremap <silent> <leader>ge :Gedit<CR>
+    " Mnemonic _i_nteractive
+    nnoremap <silent> <leader>gi :Git add -p %<CR>
+    nnoremap <silent> <leader>gg :SignifyToggle<CR>
+endif
+"}
+
+"key mappings
+map <Tab> :NERDTreeToggle<CR>
+map <Tab> :NERDTreeToggle<CR>
+map <Leader># <Leader>cc<Space>
+map <S-l> gt<Space>
+map <S-h> gT<Space>
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>"
+
+"python from powerline.ext.vim import source_plugin; source_plugin()
+
+"go settings
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+" JS configs
+let g:syntastic_javascript_checkers = ['jshint']
+
