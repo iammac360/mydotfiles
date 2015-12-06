@@ -87,5 +87,15 @@ Plug 'garyburd/go-explorer'
 Plug 'gevans/vim-ginkgo'
 Plug 'plasticboy/vim-markdown'
 Plug 'yosssi/vim-ace'
+Plug 'cfdrake/vim-carthage'
+Plug 'jvirtanen/vim-cocoapods'
+Plug 'justincampbell/vim-eighties'
+Plug 'exu/pgsql.vim'
+Plug 'tfnico/vim-gradle'
+Plug 'xuhdev/indent-java.vim', { 'for': 'java' }
+Plug 'keith/swift.vim'
+Plug 'eraserhd/vim-ios'
+Plug 'Rip-Rip/clang_complete'
+Plug 'KurtPreston/vim-autoformat-rails'
 
 call plug#end()
