@@ -74,6 +74,7 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 # Aliases
+alias tmux="TERM=xterm-256color tmux"
 alias vi="nvim"
 alias vim="nvim"
 alias mvim="reattach-to-user-namespace mvim"

@@ -174,4 +174,3 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " .sql
 let g:sql_type_default = 'pgsql'
-

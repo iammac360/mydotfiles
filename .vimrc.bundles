@@ -3,11 +3,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'spf13/vim-colors'
+Plug 'chriskempson/base16-vim'
 Plug 'whatyouhide/vim-gotham'
+Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
 Plug 'SirVer/ultisnips'
+Plug 'edkolev/tmuxline.vim'
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
