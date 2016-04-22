@@ -81,7 +81,8 @@ nmap <Leader>r :RuboCop<CR>
 
 
 " Tagbar
-nmap <C-]> :TagbarToggle<CR>
+"nmap <C-]> :TagbarToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Fugitive {
 if isdirectory(expand("~/.vim/plugged/vim-fugitive/"))
@@ -171,6 +172,47 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " JS configs
 let g:syntastic_javascript_checkers = ['jshint']
+"autocmd bufwritepost *.js silent !standard % --format
+"set autoread
 
 " .sql
 let g:sql_type_default = 'pgsql'
+
+
+" Automatically wrap at 80 characters for Blueprint Markdown
+autocmd BufRead,BufNewFile *.apib setlocal textwidth=1000
+autocmd BufRead,BufNewFile *.go setlocal textwidth=1000
+autocmd BufRead,BufNewFile * setlocal textwidth=1000
+
+let g:table_mode_corner="|"
+
+" gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
+autocmd Filetype thrift setlocal ts=4 sts=4 sw=4

@@ -3,14 +3,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 Plug 'spf13/vim-colors'
-Plug 'chriskempson/base16-vim'
 Plug 'whatyouhide/vim-gotham'
-Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
 Plug 'SirVer/ultisnips'
-Plug 'edkolev/tmuxline.vim'
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
@@ -59,7 +56,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'whatyouhide/vim-lengthmatters'
+"Plug 'whatyouhide/vim-lengthmatters'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'kien/ctrlp.vim'
@@ -100,5 +97,10 @@ Plug 'keith/swift.vim'
 Plug 'eraserhd/vim-ios'
 Plug 'Rip-Rip/clang_complete'
 Plug 'KurtPreston/vim-autoformat-rails'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'kylef/apiblueprint.vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'solarnz/thrift.vim'
 
 call plug#end()
