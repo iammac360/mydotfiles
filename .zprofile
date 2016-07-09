@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -72,3 +72,19 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+# Aliases
+alias tmux="TERM=xterm-256color tmux"
+alias vrc="vi ~/.vimrc.local"
+alias vbund="vi ~/.vimrc.bundles"
+alias vinstall="vim +PlugInstall +PlugClean +qa"
+alias cowsage="fortune | cowsay | lolcat"
+alias extip="curl ipecho.net/plain; echo"
+alias locip="ipconfig getifaddr en0"
+alias shutd="sudo shutdown -h now"
+alias rstrt="sudo shutdown -r now"
+alias resrc="source ~/.zprofile"
+alias nyan="telnet nyancat.dakko.us"
+alias zprof="vi ~/.zprofile"
+alias zrc="vi ~/.zshrc"
+alias zprezrc="vi ~/.zpreztorc"
