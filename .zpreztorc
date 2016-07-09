@@ -36,9 +36,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'syntax-highlighting' \
   'git' \
-  'homebrew' \
+  'dpkg' \
   'completion' \
-  'osx' \
   'ssh' \
   'tmux' \
   'ruby' \
@@ -46,6 +45,13 @@ zstyle ':prezto:load' pmodule \
   'rails' \
   'prompt' \
   'ssh'
+
+#
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Editor
@@ -98,7 +104,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'garrett'
+zstyle ':prezto:module:prompt' theme 'steeef'
 
 #
 # Ruby
@@ -134,6 +140,7 @@ zstyle ':prezto:module:prompt' theme 'garrett'
 #   'main' \
 #   'brackets' \
 #   'pattern' \
+#   'line' \
 #   'cursor' \
 #   'root'
 #

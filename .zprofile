@@ -72,39 +72,3 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-# Aliases
-alias tmux="TERM=xterm-256color tmux"
-alias vi="nvim"
-alias vim="nvim"
-alias mvim="reattach-to-user-namespace mvim"
-alias vrc="vi ~/.vimrc.local"
-alias vbund="vi ~/.vimrc.bundles"
-alias vinstall="vim +PlugInstall +PlugClean +qa"
-alias zrc="vi ~/.zshrc"
-alias cowsage="fortune | cowsay | lolcat"
-alias extip="curl ipecho.net/plain; echo"
-alias locip="ipconfig getifaddr en0"
-alias shutd="sudo shutdown -h now"
-alias rstrt="sudo shutdown -r now"
-alias resrc="source ~/.zprofile"
-alias nyan="telnet nyancat.dakko.us"
-logintxt() { sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "$*" } 
-dellogintxt() { sudo defaults delete /Library/Preferences/com.apple.loginwindow LoginwindowText } 
-
-# Personalize Aliases
-alias zprof="vi ~/.zprofile"
-alias zrc="vi ~/.zshrc"
-alias zprezrc="vi ~/.zpreztorc"
-#figlolcow() {
-  #figlet -f starwars "STAR WARTS"
-  #fortune | cowsay| lolcat 
-#}
-fortunecow() {
-  fortune | cowsay
-}
-
-fortunecow
-#figlolcow
-eval "$(docker-machine env sandbox)"
-

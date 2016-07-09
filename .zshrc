@@ -11,14 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-export PATH="$HOME/.gobrew/bin:$PATH"
-eval "$(gobrew init -)"
+
+export TERM=xterm-256color
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-eval "$(rbenv init -)"
-
-[[ -s /Users/marksargento/.rsvm/rsvm.sh ]] && . /Users/marksargento/.rsvm/rsvm.sh
