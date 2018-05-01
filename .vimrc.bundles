@@ -8,9 +8,16 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-airline'
 Plug 'SirVer/ultisnips'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Unite
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -36,7 +43,7 @@ Plug 'mhinz/vim-signify'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
 Plug 'rstacruz/named-media-queries'
-Plug 'rstacruz/vim-hyperstyle'
+"Plug 'rstacruz/vim-hyperstyle'
 Plug 'rstacruz/vim-opinion'
 Plug 'rstacruz/vim-closer'
 Plug 'rstacruz/vim-remux'
@@ -57,7 +64,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 "Plug 'whatyouhide/vim-lengthmatters'
-Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
@@ -81,6 +87,7 @@ Plug 'dag/vim-fish'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'mxw/vim-jsx'
 Plug 'justinj/vim-react-snippets'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'chase/vim-ansible-yaml'
 Plug 'fatih/vim-go'
 Plug 'garyburd/go-explorer'
@@ -101,6 +108,20 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'kylef/apiblueprint.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'elixir-lang/vim-elixir'
 Plug 'solarnz/thrift.vim'
+Plug 'slashmili/alchemist.vim'
+Plug 'vim-scripts/SyntaxRange'
+Plug 'StanAngeloff/php.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'klen/python-mode'
+Plug 'ElmCast/elm-vim'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8'
+Plug 'yodiaditya/vim-pydjango'
+Plug 'digitaltoad/vim-pug'
+Plug 'derekwyatt/vim-scala'
+Plug 'ktvoelker/sbt-vim'
+"Plug 'Shougo/neocomplete.vim'
 
 call plug#end()

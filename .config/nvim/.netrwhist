@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/marksargento/8ventures/moneybees/mb/app/javascript/mb-rates'
+let g:netrw_dirhist_2='/Users/marksargento/8ventures/paylance/fsapi/server/components/transaction'
+let g:netrw_dirhist_3='/Users/marksargento/8ventures/paylance/fsadminv2/client'
+let g:netrw_dirhist_4='/Users/marksargento/8ventures/ft_coinzip/coinzip/config/routes'
+let g:netrw_dirhist_5='/Users/marksargento/8ventures/ft_coinzip/coinzip'
+let g:netrw_dirhist_6='/Users/marksargento/8ventures/ft_coinzip/coinzip/.circleci'
+let g:netrw_dirhist_7='/Users/marksargento'
