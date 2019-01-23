@@ -32,19 +32,25 @@
 
 [[custom_plugins]]
   name = "mhartington/oceanic-next"
-  merged = 0
+  merged = false
 
 [[custom_plugins]]
   name = "ayu-theme/ayu-vim"
-  merged = 0
+  merged = false
 
 [[custom_plugins]]
   name = "tpope/vim-fugitive"
-  merged = 0
+  merged = false
 
 [[custom_plugins]]
   name = "mhinz/vim-signify"
-  merged = 0
+  merged = false
+
+[[custom_plugins]]
+  name = "akoutmos/vim-devicons"
+  # name = "ryanoasis/vim-devicons"
+  merged = false
+
 
 [[layers]]
   name = "colorscheme"
