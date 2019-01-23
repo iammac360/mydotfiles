@@ -26,7 +26,7 @@
   enable_statusline_display_mode = false
   filemanager = "nerdtree"
   sidebar_direction = 'left'
-  relativenumber = false
+  relativenumber = true
   bootstrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
 
