@@ -4,7 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
+#
 # Execute code that does not affect the current session in the background.
 {
   # Compile the completion dump to increase startup speed.
@@ -25,7 +25,7 @@
     #tput bold && fortune | boxes -d scroll-akn
     print
     print
-    toilet -f pagga --gay HI Mark!
+    toilet -f pagga --filter border:metal Zup Sarge!
     print
     print
   fi
