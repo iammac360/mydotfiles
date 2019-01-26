@@ -51,6 +51,13 @@
   # name = "ryanoasis/vim-devicons"
   merged = false
 
+[[custom_plugins]]
+  name = "dart-lang/dart-vim-plugin"
+  merged = false
+
+[[custom_plugins]]
+  name = "reisub0/hot-reload.vim"
+  merged = false
 
 [[layers]]
   name = "colorscheme"
@@ -60,6 +67,14 @@
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
   auto-completion-tab-key-behavior = "smart"
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "dart"
+  ]
+  [layers.override_cmd]
+    rust = ['dart_language_server']
 
 [[layers]]
   name = 'shell'
