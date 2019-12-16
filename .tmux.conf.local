@@ -42,37 +42,37 @@ set -g status-justify left
 set -g status-interval 2
 
 # message
-set -g message-fg black
-set -g message-bg yellow
-set -g message-command-fg blue
-set -g message-command-bg black
+set -g message-style fg="black"
+set -g message-style bg="yellow"
+set -g message-command-style fg="blue"
+set -g message-command-style bg="black"
 
 # OSX clipboard
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # tmuxline
 set -g status-bg "colour236"
-set -g message-command-fg "colour250"
+set -g message-command-style fg="colour250"
 set -g status-justify "left"
 set -g status-left-length "100"
 set -g status "on"
-set -g pane-active-border-fg "colour109"
-set -g message-bg "colour239"
+set -g pane-active-border-style fg="colour109"
+set -g message-style bg="colour239"
 set -g status-right-length "100"
-set -g status-right-attr "none"
-set -g message-fg "colour250"
-set -g message-command-bg "colour239"
-set -g status-attr "none"
+set -g status-right-style "none"
+set -g message-style fg="colour250"
+set -g message-command-style bg="colour239"
+set -g status-style "none"
 #set -g status-utf8 "on"
-set -g pane-border-fg "colour239"
-set -g status-left-attr "none"
-setw -g window-status-fg "colour250"
-setw -g window-status-attr "none"
-setw -g window-status-activity-bg "colour236"
-setw -g window-status-activity-attr "none"
-setw -g window-status-activity-fg "colour109"
+set -g pane-border-style fg="colour239"
+set -g status-left-style "none"
+setw -g window-status-style fg="colour250"
+setw -g window-status-style "none"
+setw -g window-status-activity-style bg="colour236"
+setw -g window-status-activity-style "none"
+setw -g window-status-activity-style fg="colour109"
 setw -g window-status-separator ""
-setw -g window-status-bg "colour236"
+setw -g window-status-style bg="colour236"
 set -g status-left "#[fg=colour235,bg=colour109,bold] #S #[fg=colour109,bg=colour236,nobold,nounderscore,noitalics]"
 set -g status-right "#{prefix_highlight} #[fg=colour239,bg=colour236,nobold,nounderscore,noitalics]#[fg=colour250,bg=colour239] Online: #{online_status}  Batt: #{battery_icon} #{battery_percentage} (#{battery_remain})  %Y-%m-%d  %H:%M #[fg=colour109,bg=colour239,nobold,nounderscore,noitalics]#[fg=colour235,bg=colour109] #h "
 setw -g window-status-format "#[fg=colour250,bg=colour236] #I #[fg=colour250,bg=colour236] #W "
