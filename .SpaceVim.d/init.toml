@@ -30,6 +30,10 @@
   bootstrap_after = "myspacevim#after"
 
 [[custom_plugins]]
+  name = "hashivim/vim-terraform"
+  merged = false
+
+[[custom_plugins]]
   name = "mhartington/oceanic-next"
   merged = false
 
@@ -103,6 +107,7 @@
 
 [[layers]]
   name = "lang#javascript"
+  enable_flow_syntax = true
 
 [[layers]]
   name = "lang#java"
