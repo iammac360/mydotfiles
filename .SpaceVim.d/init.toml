@@ -34,6 +34,10 @@
   merged = false
 
 [[custom_plugins]]
+  name = "tasn/vim-tsx"
+  merged = false
+
+[[custom_plugins]]
   name = "mhartington/oceanic-next"
   merged = false
 
@@ -56,6 +60,14 @@
 
 [[custom_plugins]]
   name = "reisub0/hot-reload.vim"
+  merged = false
+
+[[custom_plugins]]
+  name = "posva/vim-vue"
+  merged = false
+
+[[custom_plugins]]
+  name = "digitaltoad/vim-pug"
   merged = false
 
 [[layers]]
