@@ -9,6 +9,7 @@ function! myspacevim#before() abort
 
     set virtualedit=onemore             " Allow for cursor beyond last character
     set splitright
+    set autochdir
 
     " open a NERDTree automatically when vim starts up if no files were specified
     autocmd StdinReadPre * let s:std_in=1
@@ -91,6 +92,15 @@ function! myspacevim#after() abort
     if g:ft == 'vue'
       setf vue
       let g:ft = ''
+    endif
+
+    " WSL yank support
+    let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+    if executable(s:clip)
+        augroup WSLYank
+            autocmd!
+            autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+        augroup END
     endif
 endfunction
 
